@@ -1,0 +1,46 @@
+﻿body {
+    background-color:lightpink;
+}
+
+#photostrip li {
+    list-style: none;
+    margin-bottom: -7px;
+}
+
+#photostrip li img {
+    border-style: solid;
+    border-color: black;
+    border-width: 5px 9px 5px 7px;
+    border-image: url(img/Borders.png) 5 9 5 7 round;
+    -o-border-image:url(img/Borders.png) 5 9 5 7 round; /* Opera */
+    -webkit-border-image:url(img/Borders.png) 5 9 5 7 round;
+}
+
+#photostrip .print li img {
+    border-width: 8px 14px 8px 10px;
+}
+
+
+.imageColumn {
+    float:left;
+    transform: rotate(3deg);
+    -webkit-transform: rotate(3deg);
+}
+
+.imageColumn:nth-of-type(1) {
+    transform: rotate(-3deg);
+    -webkit-transform: rotate(-3deg);
+}
+
+.imageColumn:last-of-type {
+    transform: rotate(7deg);
+    -webkit-transform: rotate(7deg);
+}
+
+.imageColumn + .imageColumn {
+    margin-left: 50px;
+}
+
+.print + .print {
+    margin-left: 75px;
+}

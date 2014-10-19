@@ -1,0 +1,26 @@
+﻿@model IEnumerable<PhotoBooth.Models.ImageColumn>
+
+@{
+    ViewBag.Title = "PhotoBooth";
+}
+
+<div id="photostrip">
+    @foreach (var column in ViewData.Model)
+    {
+        <div class="imageColumn print">
+            <ul>
+                @foreach (var image in column.Column)
+                {
+                    <li class="row">
+                        <div>
+                            <a href="@image.Path" class="thumbnail">
+                                <img src="@image.Path?height=120" alt="@image.Name" />
+                            </a>
+                        </div>
+                    </li>
+                }
+            </ul>
+        </div>
+    }
+</div>
+

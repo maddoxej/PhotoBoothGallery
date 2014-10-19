@@ -1,0 +1,28 @@
+﻿@{
+    ViewBag.Title = "PhotoBooth";
+}
+@section metas
+{
+    @*reload the page every 30 seconds*@
+    <meta http-equiv="refresh" content="30">
+}
+
+<div id="photostrip" >
+    @foreach (var column in ViewData.Model) {
+        <div class="imageColumn">
+            <ul>
+                @foreach (var image in column.Column)
+                {
+                    <li class="row">
+                        <div>
+                            <a href="@image.Path" class="thumbnail">
+                                <img src="@image.Path?height=80" alt="@image.Name" />
+                            </a>
+                        </div>
+                    </li>
+                }
+            </ul>
+        </div>
+    }
+</div>
+
