@@ -12,7 +12,7 @@ namespace PhotoBooth.Controllers
 {
     public class HomeController : Controller
     {
-        public ActionResult Index(int id)
+        public ActionResult Index(int id = 0)
         {
             return View(this.GetGallery(page:id));
         }
